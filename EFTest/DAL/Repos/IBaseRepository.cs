@@ -1,0 +1,10 @@
+﻿namespace EFTest.DAL.Repos
+{
+    public interface IBaseRepository<T> where T : class
+    {
+        Task<T?> GetByIdAsync(int id);
+        Task<List<T>> GetAllAsync();
+        Task<T> AddAsync(T entity);
+        Task<bool> DeleteAsync(int id);
+    }
+}
